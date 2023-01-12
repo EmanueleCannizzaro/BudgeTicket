@@ -1,6 +1,6 @@
-import {searchFlightsAction} from './actions';
-import {db} from '../../firebase/';
-import {push} from 'connected-react-router';
+import { searchFlightsAction } from './actions';
+import { db } from '../../firebase/';
+import { push } from 'connected-react-router';
 
 let apiKey = '';
 db.collection('/keys').doc('skyscanner').get().then((doc) => {
@@ -16,30 +16,41 @@ export const searchFlights = ({
   showError,
 }) => {
   return (dispatch) => {
-    fetch(
-        `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/${currency}/en-US/${originAirport}/${destinationAirport}/${departDate}/${returnDate}`,
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-RapidAPI-Host':
-            'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
-            'X-RapidAPI-Key': apiKey,
-          },
-        },
-    )
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.Quotes.length === 0) {
-            showError('Could not find result. Please try with different airport or date.');
-            return false;
-          }
-          dispatch(push('/search'));
-          dispatch(searchFlightsAction(data));
-        })
-        .catch((error) => {
-          console.log(error);
-          showError('Failed to get results. Please try again later.');
-        });
+
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': process.env.REACT_APP_DEV_RAPID_API_KEY,
+        'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com'
+      },
+    };
+
+    const params = {
+      "adults":1,
+      "origin":"MUC",
+      "destination":"BER",
+      "departureDate":"2023-02-01",
+      "returnDate":"2023-02-05",
+      "currency":"EUR"
+    };
+    
+    const query = new URLSearchParams(params);
+
+    
+    fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.itineraries.buckets.length === 0) {
+          showError('Could not find result. Please try with different airport or date.');
+          return false;
+        }
+        dispatch(push('/search'));
+        dispatch(searchFlightsAction(data));
+      })
+      .catch((error) => {
+        console.log(error);
+        showError('Failed to get results. Please try again later.');
+      });
   };
 };
