@@ -1,11 +1,11 @@
 import { searchFlightsAction } from './actions';
-import { db } from '../../firebase/';
+// import { db } from '../../firebase/';
 import { push } from 'connected-react-router';
 
-let apiKey = '';
-db.collection('/keys').doc('skyscanner').get().then((doc) => {
-  apiKey = doc.data().key;
-});
+// let apiKey = '';
+// db.collection('/keys').doc('skyscanner').get().then((doc) => {
+//   apiKey = doc.data().key;
+// });
 
 export const searchFlights = ({
   originAirport,
@@ -26,17 +26,16 @@ export const searchFlights = ({
     };
 
     const params = {
-      "adults":1,
-      "origin":"MUC",
-      "destination":"BER",
-      "departureDate":"2023-02-01",
-      "returnDate":"2023-02-05",
-      "currency":"EUR"
+      "adults": 1,
+      "origin": originAirport,
+      "destination": destinationAirport,
+      "departureDate": departDate,
+      "returnDate": returnDate,
+      "currency": currency,
     };
-    
+
     const query = new URLSearchParams(params);
 
-    
     fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
       .then((res) => res.json())
       .then((data) => {
