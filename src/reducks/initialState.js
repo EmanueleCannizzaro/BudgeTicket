@@ -10,10 +10,7 @@ const initialState = {
     test: "test",
   },
   flights: {
-    carriers: [],
-    currency: [],
-    places: [],
-    quotes: []
+    
   },
   images: {
     data: []

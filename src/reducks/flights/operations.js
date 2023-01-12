@@ -39,13 +39,13 @@ export const searchFlights = ({
     fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.itineraries.buckets);
         if (data.itineraries.buckets.length === 0) {
           showError('Could not find result. Please try with different airport or date.');
           return false;
         }
         dispatch(push('/search'));
-        dispatch(searchFlightsAction(data));
+        dispatch(searchFlightsAction(data.itineraries.buckets));
       })
       .catch((error) => {
         console.log(error);

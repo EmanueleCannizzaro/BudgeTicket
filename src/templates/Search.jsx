@@ -51,6 +51,11 @@ const Search = () => {
   const quotesToSorted = quotes[sortType];
   const [filteredQuotes, setFilteredQuotes] = useState([]);
 
+  const [results, setResults] = useState('');
+  useEffect(() => {
+    setResults(JSON.stringify(quotes))
+  }, [quotes]);
+
   useEffect(() => {
     setFilteredQuotes(quotesToSorted);
   }, [quotes, sortType, quotesToSorted]);
@@ -136,22 +141,23 @@ const Search = () => {
             <SearchBar />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
-            <Filters
+            {/* <Filters
               setSortType={_setSortType}
               filterStops={_filterStops}
               filterAirlines={_filterAirlines}
-            />
+            /> */}
           </Grid>
           <Grid item xs={12} sm={9} md={7}>
-            <Tickets
+            {/* <Tickets
               carriers={carriers}
               currencies={currencies}
               places={places}
               quotes={filteredQuotes}
-            />
+            /> */}
+            {results}
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
-            <DestinationInfo />
+            {/* <DestinationInfo /> */}
           </Grid>
         </Grid>
       </div>
