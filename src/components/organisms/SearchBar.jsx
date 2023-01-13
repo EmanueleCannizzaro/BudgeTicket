@@ -16,20 +16,20 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   // Default values
-  const lax = AirportsData.filter((airport) => airport.iata === 'LAX')[0];
-  const ewr = AirportsData.filter((airport) => airport.iata === 'EWR')[0];
+  const hnd = AirportsData.filter((airport) => airport.iata === 'HND')[0];
+  const jfk = AirportsData.filter((airport) => airport.iata === 'JFK')[0];
 
-  const [originAirport, setOriginAirport] = useState('LAX');
-  const [destinationAirport, setDestinationAirport] = useState('EWR');
+  const [originAirport, setOriginAirport] = useState('HND');
+  const [destinationAirport, setDestinationAirport] = useState('JFK');
 
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('JPY');
 
   const aWeekLater = moment().add(1, 'week').format().substring(0, 10);
   const twoWeeksLater = moment().add(2, 'weeks').format().substring(0, 10);
   const threeWeeksLater = moment().add(3, 'weeks').format().substring(0, 10);
 
-  const [departDate, setDepartDate] = useState(aWeekLater);
-  const [returnDate, setReturnDate] = useState(twoWeeksLater);
+  const [departDate, setDepartDate] = useState(twoWeeksLater);
+  const [returnDate, setReturnDate] = useState(threeWeeksLater);
 
   // Validation
   useEffect(() => {
@@ -102,14 +102,14 @@ const SearchBar = () => {
             <SelectAirport
               select={setOriginAirport}
               label={'From'}
-              defaultValue={lax}
+              defaultValue={hnd}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <SelectAirport
               select={setDestinationAirport}
               label={'To'}
-              defaultValue={ewr}
+              defaultValue={jfk}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
