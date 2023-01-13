@@ -16,16 +16,17 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   // Default values
-  const jfk = AirportsData.filter((airport) => airport.iata === 'JFK')[0];
   const lax = AirportsData.filter((airport) => airport.iata === 'LAX')[0];
+  const ewr = AirportsData.filter((airport) => airport.iata === 'EWR')[0];
 
-  const [originAirport, setOriginAirport] = useState('JFK');
-  const [destinationAirport, setDestinationAirport] = useState('LAX');
+  const [originAirport, setOriginAirport] = useState('LAX');
+  const [destinationAirport, setDestinationAirport] = useState('EWR');
 
   const [currency, setCurrency] = useState('USD');
 
   const aWeekLater = moment().add(1, 'week').format().substring(0, 10);
   const twoWeeksLater = moment().add(2, 'weeks').format().substring(0, 10);
+  const threeWeeksLater = moment().add(3, 'weeks').format().substring(0, 10);
 
   const [departDate, setDepartDate] = useState(aWeekLater);
   const [returnDate, setReturnDate] = useState(twoWeeksLater);
@@ -101,14 +102,14 @@ const SearchBar = () => {
             <SelectAirport
               select={setOriginAirport}
               label={'From'}
-              defaultValue={jfk}
+              defaultValue={lax}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <SelectAirport
               select={setDestinationAirport}
               label={'To'}
-              defaultValue={lax}
+              defaultValue={ewr}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
@@ -123,14 +124,14 @@ const SearchBar = () => {
             <SelectDate
               select={setDepartDate}
               label={'Depart'}
-              defaultValue={aWeekLater}
+              defaultValue={twoWeeksLater}
             />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <SelectDate
               select={setReturnDate}
               label={'Return'}
-              defaultValue={twoWeeksLater}
+              defaultValue={threeWeeksLater}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={8}>
