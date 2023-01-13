@@ -94,7 +94,7 @@ const Tickets = (props) => {
     <>
       {Object.values(quotes).map((quote => {
         return (
-          <>
+          <div key={quote.id}>
             <div>
               {quote.price.formatted}
               <Button
@@ -126,7 +126,7 @@ const Tickets = (props) => {
               </ul>
             </div>
             <hr />
-          </>
+          </div>
         )
       }))}
 
