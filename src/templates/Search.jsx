@@ -156,7 +156,7 @@ const Search = () => {
             />
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
-            {/* <DestinationInfo /> */}
+            <DestinationInfo />
           </Grid>
         </Grid>
       </div>

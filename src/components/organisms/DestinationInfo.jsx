@@ -12,10 +12,7 @@ const DestinationInfo = () => {
   const images = useSelector(getImages);
 
   useEffect(() => {
-    if (places.length > 0) {
-      const cityName = places[0].CityName;
-      dispatch(searchImages(cityName));
-    }
+    places && dispatch(searchImages(places));
   }, [places, dispatch]);
 
   const showImages = () => {
@@ -26,7 +23,7 @@ const DestinationInfo = () => {
 
   return (
     <>
-      <AirportInfo />
+      {/* <AirportInfo /> */}
       {showImages()}
     </>
   );
