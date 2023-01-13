@@ -1,6 +1,7 @@
 import { searchFlightsAction } from './actions';
 // import { db } from '../../firebase/';
 import { push } from 'connected-react-router';
+import sample  from './sample.json';
 
 // let apiKey = '';
 // db.collection('/keys').doc('skyscanner').get().then((doc) => {
@@ -36,20 +37,23 @@ export const searchFlights = ({
 
     const query = new URLSearchParams(params);
 
-    fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data.itineraries.buckets);
-        if (data.itineraries.buckets.length === 0) {
-          showError('Could not find result. Please try with different airport or date.');
-          return false;
-        }
-        dispatch(push('/search'));
-        dispatch(searchFlightsAction(data.itineraries.buckets));
-      })
-      .catch((error) => {
-        console.log(error);
-        showError('Failed to get results. Please try again later.');
-      });
+    // fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data.itineraries.buckets[1].items);
+    //     if (data.itineraries.buckets[1].items.length === 0) {
+    //       showError('Could not find result. Please try with different airport or date.');
+    //       return false;
+    //     }
+    //     dispatch(push('/search'));
+    //     dispatch(searchFlightsAction(data.itineraries.buckets[1].items));
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     showError('Failed to get results. Please try again later.');
+    //   });
+
+    dispatch(push('/search'));
+    dispatch(searchFlightsAction(sample));
   };
 };
