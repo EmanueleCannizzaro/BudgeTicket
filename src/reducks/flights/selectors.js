@@ -13,7 +13,7 @@ export const getCurrencies = createSelector(
 
 export const getPlaces = createSelector(
     [userSelector],
-    (state) => state,
+    (state) => state
 );
 
 export const getQuotes = createSelector(
@@ -30,5 +30,5 @@ export const getQuotes = createSelector(
 
 export const getFlights = createSelector(
     [userSelector],
-    (state) => state.flights
+    (state) => state
 )
