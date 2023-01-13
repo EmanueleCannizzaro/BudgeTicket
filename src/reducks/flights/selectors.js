@@ -13,7 +13,7 @@ export const getCurrencies = createSelector(
 
 export const getPlaces = createSelector(
     [userSelector],
-    (state) => state[0].legs[0].destination.city,
+    (state) => state,
 );
 
 export const getQuotes = createSelector(
