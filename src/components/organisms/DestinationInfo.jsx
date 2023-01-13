@@ -12,8 +12,7 @@ const DestinationInfo = () => {
   const images = useSelector(getImages);
 
   useEffect(() => {
-    console.log(places);
-    places && dispatch(searchImages(places[0].legs[0].destination.city));
+    // places && dispatch(searchImages(places[0].legs[0].destination.city));
   }, [places, dispatch]);
 
   const showImages = () => {
