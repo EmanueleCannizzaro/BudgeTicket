@@ -16,13 +16,13 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   // Default values
-  const hnd = AirportsData.filter((airport) => airport.iata === 'HND')[0];
+  const jfk = AirportsData.filter((airport) => airport.iata === 'JFK')[0];
   const lax = AirportsData.filter((airport) => airport.iata === 'LAX')[0];
 
-  const [originAirport, setOriginAirport] = useState('HND');
+  const [originAirport, setOriginAirport] = useState('JFK');
   const [destinationAirport, setDestinationAirport] = useState('LAX');
 
-  const [currency, setCurrency] = useState('JPY');
+  const [currency, setCurrency] = useState('USD');
 
   const aWeekLater = moment().add(1, 'week').format().substring(0, 10);
   const twoWeeksLater = moment().add(2, 'weeks').format().substring(0, 10);
@@ -101,7 +101,7 @@ const SearchBar = () => {
             <SelectAirport
               select={setOriginAirport}
               label={'From'}
-              defaultValue={hnd}
+              defaultValue={jfk}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
