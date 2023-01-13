@@ -5,7 +5,6 @@ import {
   getCurrencies,
   getPlaces,
   getQuotes,
-  getFlights,
 } from '../reducks/flights/selectors';
 import {makeStyles} from '@material-ui/core/styles';
 import SearchBar from '../components/organisms/SearchBar';
@@ -47,7 +46,6 @@ const Search = () => {
   const currencies = getCurrencies(selector);
   const places = getPlaces(selector);
   const quotes = getQuotes(selector);
-  const flights = getFlights(selector);
 
   const [sortType, setSortType] = useState('default');
   const quotesToSorted = quotes[sortType];
@@ -147,13 +145,13 @@ const Search = () => {
             /> */}
           </Grid>
           <Grid item xs={12} sm={9} md={7}>
-            {/* <Tickets
+            <Tickets
               // carriers={carriers}
               // currencies={currencies}
               // places={places}
               quotes={quotes}
               // flights={flights}
-            /> */}
+            />
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
             {/* <DestinationInfo /> */}

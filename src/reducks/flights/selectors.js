@@ -27,8 +27,3 @@ export const getQuotes = createSelector(
     // }),
     (state) => state
 );
-
-export const getFlights = createSelector(
-    [userSelector],
-    (state) => state
-)

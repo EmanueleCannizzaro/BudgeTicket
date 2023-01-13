@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import Ticket from '../components/organisms/Ticket';
 import NewTicket from '../components/organisms/NewTicket';
 import AirlineLogos from '../constants/airlineLogos.json';
@@ -90,45 +90,24 @@ const Tickets = (props) => {
     window.open(url)
   }
 
+  useEffect(() => {
+    console.log(quotes)
+  }, [quotes])
+
+
   return (
     <>
-      {Object.values(quotes).map((quote => {
-        return (
-          <div key={quote.id}>
-            <div>
-              {quote.price.formatted}
-              <Button
-                onClick={() => redirect(quote.deeplink)}
-                label={'Select'}
-                color={'primary'}
-              />
-              <ul>
-                <li><img src={quote.legs[0].carriers.marketing[0].logoUrl} alt={quote.legs[0].carriers.marketing[0].name} /></li>
-                <li>{quote.legs[0].origin.id}</li>
-                <li>{quote.legs[0].origin.name}</li>
-                <li>{quote.legs[0].departure}</li>
-              </ul>
-              <ul>
-                <li>{quote.legs[0].destination.id}</li>
-                <li>{quote.legs[0].destination.name}</li>
-                <li>{quote.legs[0].arrival}</li>
-              </ul>
-              <ul>
-                <li><img src={quote.legs[1].carriers.marketing[0].logoUrl} alt={quote.legs[1].carriers.marketing[0].name} /></li>
-                <li>{quote.legs[1].origin.id}</li>
-                <li>{quote.legs[1].origin.name}</li>
-                <li>{quote.legs[1].departure}</li>
-              </ul>
-              <ul>
-                <li>{quote.legs[1].destination.id}</li>
-                <li>{quote.legs[1].destination.name}</li>
-                <li>{quote.legs[1].arrival}</li>
-              </ul>
-            </div>
-            <hr />
-          </div>
-        )
-      }))}
+      <ul>
+        {Object.values(quotes).map((quote => {
+          return (
+            <li key={quote.id}>
+              <a href={quote.deeplink}>
+                {quote.legs[0].carriers.marketing[0].name}
+              </a>
+            </li>
+          )
+        }))}
+      </ul>
 
       <Snackbar open={open} autoHideDuration={6000} onClose={closeMessage}>
         <Alert onClose={closeMessage} severity="success">
