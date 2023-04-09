@@ -13,16 +13,17 @@ export const getCurrencies = createSelector(
 
 export const getPlaces = createSelector(
     [userSelector],
-    (state) => state.places,
+    (state) => state
 );
 
 export const getQuotes = createSelector(
     [userSelector],
     (state) => ({
-      default: state.quotes,
-      lowToHigh: [...state.quotes].sort((a, b) => a.MinPrice - b.MinPrice),
-      highToLow: [...state.quotes].sort((a, b) => b.MinPrice - a.MinPrice),
-      departEarly: [...state.quotes].sort((a, b) =>
-        a.OutboundLeg.DepartureDate - b.OutboundLeg.DepartureDate),
+      default: state,
+    //   lowToHigh: [...state.quotes].sort((a, b) => a.MinPrice - b.MinPrice),
+    //   highToLow: [...state.quotes].sort((a, b) => b.MinPrice - a.MinPrice),
+    //   departEarly: [...state.quotes].sort((a, b) =>
+    //     a.OutboundLeg.DepartureDate - b.OutboundLeg.DepartureDate),
     }),
+    (state) => state
 );
