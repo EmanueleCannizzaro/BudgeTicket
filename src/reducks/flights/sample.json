@@ -1,592 +1,78 @@
-[
-	{
-		"id": "12712-2301192200--32132-0-13554-2301201030|13554-2301262020--32132-0-12712-2301262320",
-		"price": {
-			"raw": 529.28,
-			"formatted": "$530"
-		},
-		"legs": [
-			{
-				"id": "12712-2301192200--32132-0-13554-2301201030",
-				"origin": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 450,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-19T22:00:00",
-				"arrival": "2023-01-20T10:30:00",
-				"timeDeltaInDays": 1,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -32385,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/DL.png",
-							"name": "Delta"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "12712-13554-2301192200-2301201030--32132",
-						"origin": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"departure": "2023-01-19T22:00:00",
-						"arrival": "2023-01-20T10:30:00",
-						"durationInMinutes": 450,
-						"flightNumber": "6103",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -32385,
-							"name": "Delta",
-							"alternateId": "DL",
-							"allianceId": 0
-						}
-					}
-				]
-			},
-			{
-				"id": "13554-2301262020--32132-0-12712-2301262320",
-				"origin": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 480,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-26T20:20:00",
-				"arrival": "2023-01-26T23:20:00",
-				"timeDeltaInDays": 0,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -31697,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/VS.png",
-							"name": "Virgin Atlantic"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "13554-12712-2301262020-2301262320--32132",
-						"origin": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"departure": "2023-01-26T20:20:00",
-						"arrival": "2023-01-26T23:20:00",
-						"durationInMinutes": 480,
-						"flightNumber": "4824",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -31697,
-							"name": "Virgin Atlantic",
-							"alternateId": "VS",
-							"allianceId": 0
-						}
-					}
-				]
-			}
-		],
-		"isSelfTransfer": false,
-		"isProtectedSelfTransfer": false,
-		"farePolicy": {
-			"isChangeAllowed": false,
-			"isPartiallyChangeable": false,
-			"isCancellationAllowed": false,
-			"isPartiallyRefundable": false
-		},
-		"tags": [
-			"cheapest",
-			"third_shortest"
-		],
-		"isMashUp": false,
-		"hasFlexibleOptions": false,
-		"score": 1,
-		"pricingOptions": [
-			{
-				"agentIds": [
-					"wauk"
-				],
-				"amount": 529.28,
-				"bookingProposition": "PBOOK"
-			}
-		],
-		"deeplink": "https://www.skyscanner.net/transport/flights/jfk/lhr/230119/230126/config/12712-2301192200--32132-0-13554-2301201030|13554-2301262020--32132-0-12712-2301262320?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&destinationentityid=27544008&originentityid=27537542&inboundaltsenabled=false&infants=0&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1"
-	},
-	{
-		"id": "12712-2301192200--32132-0-13554-2301201030|13554-2301261600--32132-0-12712-2301261930",
-		"price": {
-			"raw": 529.28,
-			"formatted": "$530"
-		},
-		"legs": [
-			{
-				"id": "12712-2301192200--32132-0-13554-2301201030",
-				"origin": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 450,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-19T22:00:00",
-				"arrival": "2023-01-20T10:30:00",
-				"timeDeltaInDays": 1,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -32385,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/DL.png",
-							"name": "Delta"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "12712-13554-2301192200-2301201030--32132",
-						"origin": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"departure": "2023-01-19T22:00:00",
-						"arrival": "2023-01-20T10:30:00",
-						"durationInMinutes": 450,
-						"flightNumber": "6103",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -32385,
-							"name": "Delta",
-							"alternateId": "DL",
-							"allianceId": 0
-						}
-					}
-				]
-			},
-			{
-				"id": "13554-2301261600--32132-0-12712-2301261930",
-				"origin": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 510,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-26T16:00:00",
-				"arrival": "2023-01-26T19:30:00",
-				"timeDeltaInDays": 0,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -32385,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/DL.png",
-							"name": "Delta"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "13554-12712-2301261600-2301261930--32132",
-						"origin": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"departure": "2023-01-26T16:00:00",
-						"arrival": "2023-01-26T19:30:00",
-						"durationInMinutes": 510,
-						"flightNumber": "6006",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -32385,
-							"name": "Delta",
-							"alternateId": "DL",
-							"allianceId": 0
-						}
-					}
-				]
-			}
-		],
-		"isSelfTransfer": false,
-		"isProtectedSelfTransfer": false,
-		"farePolicy": {
-			"isChangeAllowed": false,
-			"isPartiallyChangeable": false,
-			"isCancellationAllowed": false,
-			"isPartiallyRefundable": false
-		},
-		"tags": [
-			"cheapest"
-		],
-		"isMashUp": false,
-		"hasFlexibleOptions": false,
-		"score": 1,
-		"pricingOptions": [
-			{
-				"agentIds": [
-					"wauk"
-				],
-				"amount": 529.28,
-				"bookingProposition": "PBOOK"
-			}
-		],
-		"deeplink": "https://www.skyscanner.net/transport/flights/jfk/lhr/230119/230126/config/12712-2301192200--32132-0-13554-2301201030|13554-2301261600--32132-0-12712-2301261930?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&destinationentityid=27544008&originentityid=27537542&inboundaltsenabled=false&infants=0&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1"
-	},
-	{
-		"id": "12712-2301192305--32132-0-13554-2301201055|13554-2301261600--32132-0-12712-2301261930",
-		"price": {
-			"raw": 529.28,
-			"formatted": "$530"
-		},
-		"legs": [
-			{
-				"id": "12712-2301192305--32132-0-13554-2301201055",
-				"origin": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 410,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-19T23:05:00",
-				"arrival": "2023-01-20T10:55:00",
-				"timeDeltaInDays": 1,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -31697,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/VS.png",
-							"name": "Virgin Atlantic"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "12712-13554-2301192305-2301201055--32132",
-						"origin": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"departure": "2023-01-19T23:05:00",
-						"arrival": "2023-01-20T10:55:00",
-						"durationInMinutes": 410,
-						"flightNumber": "4828",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -31697,
-							"name": "Virgin Atlantic",
-							"alternateId": "VS",
-							"allianceId": 0
-						}
-					}
-				]
-			},
-			{
-				"id": "13554-2301261600--32132-0-12712-2301261930",
-				"origin": {
-					"id": "LHR",
-					"name": "London Heathrow",
-					"displayCode": "LHR",
-					"city": "London",
-					"isHighlighted": false
-				},
-				"destination": {
-					"id": "JFK",
-					"name": "New York John F. Kennedy",
-					"displayCode": "JFK",
-					"city": "New York",
-					"isHighlighted": false
-				},
-				"durationInMinutes": 510,
-				"stopCount": 0,
-				"isSmallestStops": false,
-				"departure": "2023-01-26T16:00:00",
-				"arrival": "2023-01-26T19:30:00",
-				"timeDeltaInDays": 0,
-				"carriers": {
-					"marketing": [
-						{
-							"id": -32132,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/KL.png",
-							"name": "KLM"
-						}
-					],
-					"operating": [
-						{
-							"id": -32385,
-							"logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/DL.png",
-							"name": "Delta"
-						}
-					],
-					"operationType": "not_operated"
-				},
-				"segments": [
-					{
-						"id": "13554-12712-2301261600-2301261930--32132",
-						"origin": {
-							"flightPlaceId": "LHR",
-							"parent": {
-								"flightPlaceId": "LOND",
-								"name": "London",
-								"type": "City"
-							},
-							"name": "London Heathrow",
-							"type": "Airport"
-						},
-						"destination": {
-							"flightPlaceId": "JFK",
-							"parent": {
-								"flightPlaceId": "NYCA",
-								"name": "New York",
-								"type": "City"
-							},
-							"name": "New York John F. Kennedy",
-							"type": "Airport"
-						},
-						"departure": "2023-01-26T16:00:00",
-						"arrival": "2023-01-26T19:30:00",
-						"durationInMinutes": 510,
-						"flightNumber": "6006",
-						"marketingCarrier": {
-							"id": -32132,
-							"name": "KLM",
-							"alternateId": "KL",
-							"allianceId": 0
-						},
-						"operatingCarrier": {
-							"id": -32385,
-							"name": "Delta",
-							"alternateId": "DL",
-							"allianceId": 0
-						}
-					}
-				]
-			}
-		],
-		"isSelfTransfer": false,
-		"isProtectedSelfTransfer": false,
-		"farePolicy": {
-			"isChangeAllowed": false,
-			"isPartiallyChangeable": false,
-			"isCancellationAllowed": false,
-			"isPartiallyRefundable": false
-		},
-		"eco": {
-			"ecoContenderDelta": 11.002153
-		},
-		"tags": [
-			"cheapest",
-			"second_shortest"
-		],
-		"isMashUp": false,
-		"hasFlexibleOptions": false,
-		"score": 1,
-		"pricingOptions": [
-			{
-				"agentIds": [
-					"wauk"
-				],
-				"amount": 529.28,
-				"bookingProposition": "PBOOK"
-			}
-		],
-		"deeplink": "https://www.skyscanner.net/transport/flights/jfk/lhr/230119/230126/config/12712-2301192305--32132-0-13554-2301201055|13554-2301261600--32132-0-12712-2301261930?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&destinationentityid=27544008&originentityid=27537542&inboundaltsenabled=false&infants=0&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1"
-	}
-]
+{
+    "Quotes": [
+      {
+        "QuoteId": 1,
+        "MinPrice": 336,
+        "Direct": true,
+        "OutboundLeg": {
+          "CarrierIds": [
+            1864
+          ],
+          "OriginId": 81727,
+          "DestinationId": 60987,
+          "DepartureDate": "2018-04-01T00:00:00"
+        },
+        "InboundLeg": {
+          "CarrierIds": [
+            851
+          ],
+          "OriginId": 60987,
+          "DestinationId": 81727,
+          "DepartureDate": "2018-05-01T00:00:00"
+        },
+        "QuoteDateTime": "2018-03-08T04:54:00"
+      }
+    ],
+    "Places": [
+      {
+        "PlaceId": 60987,
+        "IataCode": "JFK",
+        "Name": "New York John F. Kennedy",
+        "Type": "Station",
+        "SkyscannerCode": "JFK",
+        "CityName": "New York",
+        "CityId": "NYCA",
+        "CountryName": "United States"
+      },
+      {
+        "PlaceId": 81727,
+        "IataCode": "SFO",
+        "Name": "San Francisco International",
+        "Type": "Station",
+        "SkyscannerCode": "SFO",
+        "CityName": "San Francisco",
+        "CityId": "SFOA",
+        "CountryName": "United States"
+      }
+    ],
+    "Carriers": [
+      {
+        "CarrierId": 851,
+        "Name": "Alaska Airlines"
+      },
+      {
+        "CarrierId": 870,
+        "Name": "jetBlue"
+      },
+      {
+        "CarrierId": 1721,
+        "Name": "Sun Country Airlines"
+      },
+      {
+        "CarrierId": 1864,
+        "Name": "Virgin America"
+      }
+    ],
+    "Currencies": [
+      {
+        "Code": "USD",
+        "Symbol": "$",
+        "ThousandsSeparator": ",",
+        "DecimalSeparator": ".",
+        "SymbolOnLeft": true,
+        "SpaceBetweenAmountAndSymbol": false,
+        "RoundingCoefficient": 0,
+        "DecimalDigits": 2
+      }
+    ]
+  }
