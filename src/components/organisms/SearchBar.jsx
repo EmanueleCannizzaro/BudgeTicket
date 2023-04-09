@@ -16,20 +16,19 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   // Default values
-  const hnd = AirportsData.filter((airport) => airport.iata === 'HND')[0];
-  const jfk = AirportsData.filter((airport) => airport.iata === 'JFK')[0];
+  const yvr = AirportsData.filter((airport) => airport.iata === 'YVR')[0];
+  const sfo = AirportsData.filter((airport) => airport.iata === 'SFO')[0];
 
-  const [originAirport, setOriginAirport] = useState('HND');
-  const [destinationAirport, setDestinationAirport] = useState('JFK');
+  const [originAirport, setOriginAirport] = useState('YVR');
+  const [destinationAirport, setDestinationAirport] = useState('SFO');
 
-  const [currency, setCurrency] = useState('JPY');
+  const [currency, setCurrency] = useState('CAD');
 
   const aWeekLater = moment().add(1, 'week').format().substring(0, 10);
   const twoWeeksLater = moment().add(2, 'weeks').format().substring(0, 10);
-  const threeWeeksLater = moment().add(3, 'weeks').format().substring(0, 10);
 
-  const [departDate, setDepartDate] = useState(twoWeeksLater);
-  const [returnDate, setReturnDate] = useState(threeWeeksLater);
+  const [departDate, setDepartDate] = useState(aWeekLater);
+  const [returnDate, setReturnDate] = useState(twoWeeksLater);
 
   // Validation
   useEffect(() => {
@@ -102,14 +101,14 @@ const SearchBar = () => {
             <SelectAirport
               select={setOriginAirport}
               label={'From'}
-              defaultValue={hnd}
+              defaultValue={yvr}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <SelectAirport
               select={setDestinationAirport}
               label={'To'}
-              defaultValue={jfk}
+              defaultValue={sfo}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
@@ -124,14 +123,14 @@ const SearchBar = () => {
             <SelectDate
               select={setDepartDate}
               label={'Depart'}
-              defaultValue={twoWeeksLater}
+              defaultValue={aWeekLater}
             />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <SelectDate
               select={setReturnDate}
               label={'Return'}
-              defaultValue={threeWeeksLater}
+              defaultValue={twoWeeksLater}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={8}>

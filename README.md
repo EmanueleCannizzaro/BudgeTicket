@@ -63,10 +63,3 @@ REACT_APP_DEV_GEOCODING_API_KEY="****************"
 ```bash
 $ npm start
 ```
-
-4. Deploy
-
-```bash
-$ npm run build
-$ firebase deploy --only hosting
-```
