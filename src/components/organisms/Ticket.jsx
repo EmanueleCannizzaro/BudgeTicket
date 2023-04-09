@@ -4,7 +4,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Divider from '@material-ui/core/Divider';
-// import './Ticket.scss';
+import './Ticket.scss';
 import {getIsSignedIn} from '../../reducks/users/selectors';
 import {Button} from '../atoms';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
