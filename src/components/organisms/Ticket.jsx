@@ -153,7 +153,7 @@ const Ticket = (props) => {
               />
               <Typography className={classes.caption} variant="caption"
                 display="block" gutterBottom>
-                Ticket will be available after sign in
+                Please sign in to purchase
               </Typography>
             </>}
 

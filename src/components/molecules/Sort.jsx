@@ -35,7 +35,6 @@ const Sort = (props) => {
           value={sortType}
           onChange={handleChange}
         >
-          <MenuItem value={'departEarly'}>Early Departure</MenuItem>
           <MenuItem value={'lowToHigh'}>Price: Low to High</MenuItem>
           <MenuItem value={'highToLow'}>Price: High to Low</MenuItem>
         </Select>

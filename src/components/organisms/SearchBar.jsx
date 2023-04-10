@@ -16,16 +16,16 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
   // Default values
-  const yvr = AirportsData.filter((airport) => airport.iata === 'YVR')[0];
-  const sfo = AirportsData.filter((airport) => airport.iata === 'SFO')[0];
+  const yvr = AirportsData.filter((airport) => airport.iata === 'HND')[0];
+  const sfo = AirportsData.filter((airport) => airport.iata === 'JFK')[0];
 
-  const [originAirport, setOriginAirport] = useState('YVR');
-  const [destinationAirport, setDestinationAirport] = useState('SFO');
+  const [originAirport, setOriginAirport] = useState('HND');
+  const [destinationAirport, setDestinationAirport] = useState('JFK');
 
-  const [currency, setCurrency] = useState('CAD');
+  const [currency, setCurrency] = useState('JPY');
 
-  const aWeekLater = moment().add(1, 'week').format().substring(0, 10);
-  const twoWeeksLater = moment().add(2, 'weeks').format().substring(0, 10);
+  const aWeekLater = moment().add(2, 'week').format().substring(0, 10);
+  const twoWeeksLater = moment().add(3, 'weeks').format().substring(0, 10);
 
   const [departDate, setDepartDate] = useState(aWeekLater);
   const [returnDate, setReturnDate] = useState(twoWeeksLater);
