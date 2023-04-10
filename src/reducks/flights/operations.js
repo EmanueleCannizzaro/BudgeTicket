@@ -18,24 +18,24 @@ export const searchFlights = ({
 }) => {
   return (dispatch) => {
 
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_DEV_RAPID_API_KEY,
-        'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com'
-      },
-    };
+    // const options = {
+    //   method: 'GET',
+    //   headers: {
+    //     'X-RapidAPI-Key': process.env.REACT_APP_DEV_RAPID_API_KEY,
+    //     'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com'
+    //   },
+    // };
 
-    const params = {
-      "adults":1,
-      "origin":"MUC",
-      "destination":"BER",
-      "departureDate":"2023-02-01",
-      "returnDate":"2023-02-05",
-      "currency":"EUR"
-    };
+    // const params = {
+    //   "adults":1,
+    //   "origin":"MUC",
+    //   "destination":"BER",
+    //   "departureDate":"2023-02-01",
+    //   "returnDate":"2023-02-05",
+    //   "currency":"EUR"
+    // };
     
-    const query = new URLSearchParams(params);
+    // const query = new URLSearchParams(params);
 
     // fetch(`https://skyscanner44.p.rapidapi.com/search?${query}`, options)
     //   .then((res) => res.json())
@@ -54,6 +54,8 @@ export const searchFlights = ({
     //   });
 
     dispatch(push('/search'));
-    dispatch(searchFlightsAction(sampleData));
+    setTimeout(() => {
+      dispatch(searchFlightsAction(sampleData));
+    }, "1000")
   };
 };
