@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import createStore from './reducks/store';
-import App from './App';
+import App from './App.jsx';
 import {ConnectedRouter} from 'connected-react-router';
 import * as History from 'history';
 import {MuiThemeProvider} from '@material-ui/core';
